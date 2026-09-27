@@ -8,3 +8,5 @@ textColor = "#FFFFFF"
 borderColor = "#696969"
 showWidgetBorder=true
 font = "sans serif"
+metricValueFontSize = "1.9rem"
+codeFontSize = "0.875rem"
