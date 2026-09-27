@@ -76,7 +76,7 @@ def main_perifocal_to_cartesian():
     col3, col4 = st.columns([3, 1], border=True)
     
     with col4:
-        st.subheader("Import Data (optional)", help="Upload a .csv file in the format of $e, r, \theta, \Omega, \omega, i$", anchor=False, text_alignment="center")
+        st.subheader("Import Data (optional)", help="Upload a .csv file in the format of $e, r, \\theta, \Omega, \omega, i$", anchor=False, text_alignment="center")
         with st.container(horizontal_alignment="center"):
             uploaded_file = st.file_uploader("File Loader", label_visibility="collapsed", type=["csv"], width=120, key="uploader_pc")
 
