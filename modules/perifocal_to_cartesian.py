@@ -105,10 +105,14 @@ def main_perifocal_to_cartesian():
 
         with col6:
             with st.container(horizontal=True, vertical_alignment="center", horizontal_alignment="distribute"):
-                st.button(label="$\mathbf{\mu}_{\mathrm{Earth}}$", type="secondary", width="stretch", on_click=update_mu, args=(398600.0,), key="pc_mu_e")
-                st.button(label="$\mathbf{\mu}_{\mathrm{Sun}}$", type="secondary", width="stretch", on_click=update_mu, args=(132712440000.0,), key="pc_mu_s")
-                st.button(label="$\mathbf{\mu}_{\mathrm{Moon}}$", type="secondary", width="stretch", on_click=update_mu, args=(4902.8,), key="pc_mu_m")
-                st.button(label="$\mathbf{\mu}_{\mathrm{Mars}}$", type="secondary", width="stretch", on_click=update_mu, args=(42828.4,), key="pc_mu_ma")
+                st.button(label="$\mathbf{\mu}_{\mathrm{Earth}}$", type="primary" if st.session_state.mu_val == 398600.0 else "secondary",
+                            width="stretch", on_click=update_mu, args=(398600.0,), key="lam_mu_e")
+                st.button(label="$\mathbf{\mu}_{\mathrm{Sun}}$", type="primary" if st.session_state.mu_val == 132712440000.0 else "secondary",
+                            width="stretch", on_click=update_mu, args=(132712440000.0,), key="lam_mu_s")
+                st.button(label="$\mathbf{\mu}_{\mathrm{Moon}}$", type="primary" if st.session_state.mu_val == 4902.8 else "secondary",
+                            width="stretch", on_click=update_mu, args=(4902.8,), key="lam_mu_m")
+                st.button(label="$\mathbf{\mu}_{\mathrm{Mars}}$", type="primary" if st.session_state.mu_val == 42828.4 else "secondary",
+                            width="stretch", on_click=update_mu, args=(42828.4,), key="lam_mu_ma")
 
         small_divider()
         st.write(" ")
