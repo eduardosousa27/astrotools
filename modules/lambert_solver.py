@@ -123,7 +123,7 @@ def main_lambert():
     col3, col4 = st.columns([3, 1], border=True)
     
     with col4:
-        st.subheader("Import Data", help="Upload CSV: $x_1, y_1, z_1, x_2, y_2, z_2, \Delta t$", anchor=False, text_alignment="center")
+        st.subheader("Import Data", help="Upload a .csv file in the format of x₁, y₁, z₁, x₂, y₂, z₂, Δt", anchor=False, text_alignment="center")
         with st.container(horizontal_alignment="center"):
             uploaded_file = st.file_uploader("File Loader", label_visibility="collapsed", type=["csv"], key="uploader_lam", width=120)
 
