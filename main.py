@@ -3,6 +3,8 @@ from modules.homepage import main_homepage
 from modules.cartesian_to_perifocal import main_cartesian_to_perifocal
 from modules.perifocal_to_cartesian import main_perifocal_to_cartesian
 from modules.lambert_solver import main_lambert
+from modules.time_of_flight import main_time_of_flight
+from modules.theta_propagation import main_theta_propagation
 from auxiliary.custom_visuals import divider
 
 st.set_page_config(page_title="AstroTools", page_icon="assets/astro_tools_logo.png", layout="wide", initial_sidebar_state="expanded")
@@ -26,6 +28,8 @@ with st.sidebar:
         st.button("Cartesian → Perifocal", type="tertiary", on_click=set_option, args=("cartesian_to_perifocal",), use_container_width=True)
         st.button("Perifocal → Cartesian", type="tertiary", on_click=set_option, args=("perifocal_to_cartesian",), use_container_width=True)
         st.button("Lambert Problem Solver", type="tertiary", on_click=set_option, args=("lambert",), use_container_width=True)
+        st.button("Time of Flight", type="tertiary", on_click=set_option, args=("time_of_flight",), use_container_width=True)
+        st.button("True Anomaly Propagation", type="tertiary", on_click=set_option, args=("theta_propagation",), use_container_width=True)
 
 if st.session_state.option == "homepage":
     main_homepage()
@@ -38,3 +42,9 @@ elif st.session_state.option == "perifocal_to_cartesian":
 
 elif st.session_state.option == "lambert":
     main_lambert()
+
+elif st.session_state.option == "time_of_flight":
+    main_time_of_flight()
+
+elif st.session_state.option == "theta_propagation":
+    main_theta_propagation()
